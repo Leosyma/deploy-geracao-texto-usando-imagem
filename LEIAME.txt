@@ -5,15 +5,15 @@
 
 # Execute o comando abaixo para criar a imagem Docker
 
-docker build -t dsa-deploy:p4 .
+docker build -t image-qa:local .
 
 # Execute o comando abaixo para criar o container Docker
 
-docker run -dit --name dsa-p4 -p 3000:3000 dsa-deploy:p4 
+docker run -dit --name image-qa-api -p 3000:3000 image-qa:local 
 
 # Visualize os logs para verificar se a API já foi inicializada
 
-docker logs dsa-p4
+docker logs image-qa-api
 
 # Então execute a chamada cliente
 

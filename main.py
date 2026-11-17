@@ -25,7 +25,7 @@ app = FastAPI()
 # É uma forma simples de verificar se a sua API está funcionando corretamente.
 @app.get("/")
 def inicio():
-    return {"DSA": "Projeto4"}
+    return {"status": "ok"}
 
 # Raiz: "http://localhost:3000/"
 # API:  "http://localhost:3000/api"

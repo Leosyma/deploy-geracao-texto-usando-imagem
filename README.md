@@ -77,7 +77,7 @@ Health check route used to verify whether the API is running.
 
 ```json
 {
-  "DSA": "Projeto4"
+  "status": "ok"
 }
 ```
 
@@ -121,19 +121,19 @@ What is the dog doing in the image?
 From the project folder, build the Docker image:
 
 ```bash
-docker build -t dsa-deploy:p4 .
+docker build -t image-qa:local .
 ```
 
 Run the Docker container:
 
 ```bash
-docker run -dit --name dsa-p4 -p 3000:3000 dsa-deploy:p4
+docker run -dit --name image-qa-api -p 3000:3000 image-qa:local
 ```
 
 Check the container logs to confirm that the API has started:
 
 ```bash
-docker logs dsa-p4
+docker logs image-qa-api
 ```
 
 The API will be available at:
